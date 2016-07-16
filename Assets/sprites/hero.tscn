@@ -1,7 +1,7 @@
 [gd_scene load_steps=88 format=1]
 
 [ext_resource path="res://Assets/sprites/scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/fonts/DeJaVuSans/DejaVuSans.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/fonts/DejaVuSans/DejaVuSans.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/sprites/hero/shadow.tres" type="Shader" id=3]
 [ext_resource path="res://Assets/sprites/hero/png/00.png" type="Texture" id=4]
 [ext_resource path="res://Assets/sprites/hero/png/01.png" type="Texture" id=5]

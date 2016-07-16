@@ -6,8 +6,6 @@
 [ext_resource path="res://Assets/gui.gd" type="Script" id=4]
 [ext_resource path="res://Assets/sprites/hero.tscn" type="PackedScene" id=5]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 
 font/size = 30

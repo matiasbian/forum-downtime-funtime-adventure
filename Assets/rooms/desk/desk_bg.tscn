@@ -11,7 +11,6 @@
 [ext_resource path="res://Assets/fonts/DejaVuSans.fnt" type="BitmapFont" id=9]
 [ext_resource path="res://Assets/debuglabel.gd" type="Script" id=10]
 
-
 [sub_resource type="CanvasItemShader" id=1]
 
 _code = { "fragment":"uniform texture bg;\nfloat alpha = tex(TEXTURE,UV).a;\nCOLOR = alpha*tex(bg,UV);", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
@@ -148,7 +147,6 @@ transform/scale = Vector2( 1, 0.826468 )
 
 __meta__ = { "_editor_collapsed":true }
 
-
 [node name="desk_lamp" type="Area2D" parent="Hotspots"]
 
 transform/pos = Vector2( 569.667, 408.834 )
@@ -185,7 +183,6 @@ trigger = false
 [node name="interactpos" type="Position2D" parent="Hotspots/desk_lamp"]
 
 transform/pos = Vector2( -95.4264, 194.243 )
-
 
 [node name="Label" type="Label" parent="."]
 
