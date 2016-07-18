@@ -43,7 +43,7 @@ script/script = ExtResource( 4 )
 
 [node name="player" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 569.769, 547.159 )
+transform/pos = Vector2( 463.769, 607.159 )
 terrainPath = NodePath("../bg")
 
 

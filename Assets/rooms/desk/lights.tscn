@@ -12,19 +12,23 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("light_backwall_right:energy")
 tracks/0/interp = 1
-tracks/0/keys = { "cont":true, "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.0, 0.2 ] }
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.2 ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("light_rightwall:energy")
 tracks/1/interp = 1
-tracks/1/keys = { "cont":true, "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.0, 0.2 ] }
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.2 ] }
 tracks/2/type = "value"
 tracks/2/path = NodePath("light_desk:energy")
 tracks/2/interp = 1
-tracks/2/keys = { "cont":true, "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.0, 0.2 ] }
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.2 ] }
 tracks/3/type = "value"
 tracks/3/path = NodePath("light_backwall_gauche:energy")
 tracks/3/interp = 1
-tracks/3/keys = { "cont":true, "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.0, 0.2 ] }
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.2 ] }
 
 [node name="Lights" type="Node2D"]
 
@@ -39,7 +43,32 @@ __meta__ = { "_edit_lock_":true }
 [node name="light_desk" type="Light2D" parent="."]
 
 visibility/light_mask = 0
-transform/pos = Vector2( 568.412, 402.05 )
+transform/pos = Vector2( 431.412, 204.05 )
+z/z = 1
+z/relative = false
+enabled = true
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.803006
+mode = 0
+range/height = 0.0
+range/z_min = 0
+range/z_max = 0
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[node name="light_lamp2" type="Light2D" parent="."]
+
+visibility/light_mask = 0
+transform/pos = Vector2( 937.412, 204.05 )
 z/z = 1
 z/relative = false
 enabled = true
