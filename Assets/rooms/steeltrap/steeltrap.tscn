@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=1]
 
-[ext_resource path="res://Assets/rooms/desk/desk_bg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/rooms/steeltrap/steeltrap_bg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/debugnode.gd" type="Script" id=2]
 [ext_resource path="res://Assets/fonts/DejaVuSans/DejaVuSans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/gui.gd" type="Script" id=4]
@@ -43,7 +43,7 @@ script/script = ExtResource( 4 )
 
 [node name="player" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 463.769, 607.159 )
+transform/pos = Vector2( 421.769, 565.159 )
 terrainPath = NodePath("../bg")
 
 
