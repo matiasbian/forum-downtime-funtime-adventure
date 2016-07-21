@@ -94,7 +94,7 @@ shadow/item_mask = 1
 [node name="light_tv" type="Light2D" parent="."]
 
 visibility/light_mask = 0
-transform/pos = Vector2( 1146.41, 432.05 )
+transform/pos = Vector2( 1139.41, 416.05 )
 z/z = 1
 z/relative = false
 enabled = true
