@@ -82,7 +82,7 @@ func add_return_on_first_space(text, start_pos):
 
 func _process(delta):
 	arrived_to_destination = false
-	set_scale(terrain.get_scale(get_global_pos()))
+	#set_scale(terrain.get_scale(get_global_pos()))
 	
 	if (path.size()>1):
 		#print(speed)
@@ -141,15 +141,15 @@ func _process(delta):
 			
 			
 		# modify sprite position at time T
-		var atpos = path[path.size()-1]
-		set_pos(atpos)
+		#var atpos = path[path.size()-1]
+		#set_pos(atpos)
 		
 		# rescale player sprite according to the depth given by the terrain
 		#print("Terrain Depth = ", terrain.get_scale(atpos))
 		#set_scale(terrain.get_scale(atpos))
-		_update_scale(atpos)
+		#_update_scale(atpos)
 		# modification of Z-index according to the depth given by the terrain
-		_update_z()
+		#_update_z()
 		#print("ScaleX = ", terrain.get_scale(atpos).x/0.5)
 		#print("PlayerZ = ", get_z())
 		

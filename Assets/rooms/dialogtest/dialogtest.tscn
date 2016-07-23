@@ -54,10 +54,17 @@ script/script = ExtResource( 5 )
 
 [node name="player" parent="World" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 573.769, 677.159 )
+transform/pos = Vector2( 565.769, 653.159 )
 terrainPath = NodePath("../bg")
 
-[node name="Button1" type="Button" parent="World"]
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+
+[node name="Button1" type="Button" parent="Timer"]
 
 visibility/opacity = 0.0
 focus/ignore_mouse = false
@@ -74,10 +81,11 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 toggle_mode = false
+click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
 flat = false
 
-[connection signal="pressed" from="World/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Timer/Button1" to="." method="_on_Button1_pressed"]
 
 

@@ -10,13 +10,14 @@ var dialogue = [
 
      {
      "id"         : 0,#									internal ID for frontiersman_steeltrap dialogues
-     "npc"        : "frontiersman_steeltrap",#								npc who belong this line
-     "q"          : "Ugh.",#				player dialogue
+     "npc"        : "frontiersman_steeltrap",#								npc who says this line
+     "q"          : "Ugh. My head...",#				player dialogue
      "a"          : ["Finally, you're awake."],#npc answer (multiple lines)
      "cinematic"  : [
-          {"speaker":"frontiersman_steeltrap","text":"Hold on. I was expecting my arch nemesis!"},
+          {"speaker":"frontiersman_steeltrap","text":"Wait a minute... I was expecting my arch nemesis!"},
           {"speaker":"frontiersman_steeltrap","text":"You're not the safety inspector."},
-          {"speaker":"frontiersman_steeltrap","text":"What the heck are you supposed to be?"}],
+          {"speaker":"frontiersman_steeltrap","text":"What the heck are you supposed to be?"},
+          {"speaker":"frontiersman_steeltrap","text":"Some kind of... hamster girl?"}],
 
     
      "enabled"    : true,#								if the line is enabled from new game
@@ -27,7 +28,12 @@ var dialogue = [
      "id"         : 1,
      "npc"        : "frontiersman_steeltrap",
      "q"          : ["I'm Lemming Woman."],
-     "a"          : ["I guess I can test my steel trap on you."],
+     "a"          : ["Good for you."],
+     "cinematic"  : [
+          {"speaker":"frontiersman_steeltrap","text":"Since my plans were ruined anyway,"},
+          {"speaker":"frontiersman_steeltrap","text":"I guess I can use you to test my steel trap!"},
+          {"speaker":"player","text":"Gulp."}],
+
      "enabled"    : false,
      "activate"   : 3,
      "disable"    : 2,
@@ -35,11 +41,16 @@ var dialogue = [
      ,{
      "id"         : 2,
      "npc"        : "frontiersman_steeltrap",
-     "q"          : ["I'm selling these fine leather jackets."],
-     "a"          : "Ah, excellent. A salesperson is the perfect test for my steel trap.",
-     "enabled"    : false,
-     "disable"    : 1,
+     "q"          : "I'm selling these fine leather jackets.",#				player dialogue
+     "a"          : ["Ah, a salesperson. Excellent!"],
+     "cinematic"  : [
+          {"speaker":"frontiersman_steeltrap","text":"You'll be a perfect test for my steel trap!"},
+          {"speaker":"player","text":"Gulp."}],
+    
+     "enabled"    : false,#								if the line is enabled from new game
+     "disable"    : 1,#other lines to be disable other lines (the picked one is always disabled)
      }
+
 ]
 
 
