@@ -184,7 +184,6 @@ canvasmodulatePath = "../CanvasModulate"
 
 [node name="mask_chair" type="Light2D" parent="Masks"]
 
-editor/display_folded = true
 visibility/light_mask = 0
 transform/pos = Vector2( 640, 400 )
 z/relative = false
@@ -496,9 +495,9 @@ margin/right = 300.0
 margin/bottom = 48.0
 custom_fonts/font = ExtResource( 9 )
 text = "INFORMATION LABEL"
-percent_visible = 1.0
+percent_visible = 0.0
 lines_skipped = 0
-max_lines_visible = -1
+max_lines_visible = 0
 script/script = ExtResource( 10 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

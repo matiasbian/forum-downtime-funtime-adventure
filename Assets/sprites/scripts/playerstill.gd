@@ -67,7 +67,7 @@ func say_line(arr_lines):
 		wait_time = 2.0
 	timerNode.set_wait_time(wait_time)
 	timerNode.start()
-	get_node("dialog").set_text(" " + text)
+	get_node("dialog").set_text(str(current_line)+": " + text)
 
 func on_dialog_line_timeout():
 	print("Warning: player.gd: dialog line timeout.")

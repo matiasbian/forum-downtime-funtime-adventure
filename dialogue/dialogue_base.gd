@@ -278,14 +278,16 @@ func deliver_button(id):#this is the function who "send the pick button" in the 
 #	button.text = db.dialogue[id]["q"]#button text goes here
 
 
-	button.text = text#button text goes here
-	button.base = get_node(".")#when button need to access to dialogue main node (sorter_fillup array etc)
-	button.picker = picker#the scroll container node
-	button.sorter = sorter#sorter node (all, and ONLY, buttons will contained here)
-	button.set_name("choice "+ str(order_in_sorter))
+	if !(text == "room steeltrap"):
+		button.text = text#button text goes here
+		button.base = get_node(".")#when button need to access to dialogue main node (sorter_fillup array etc)
+		button.picker = picker#the scroll container node
+		button.sorter = sorter#sorter node (all, and ONLY, buttons will contained here)
+		button.set_name("choice "+ str(order_in_sorter))
 	
-	sorter.add_child(button)
-
+		sorter.add_child(button)
+	else:
+		get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn")
 
 func sorter_cleanup():
 	sorter_fillup = null

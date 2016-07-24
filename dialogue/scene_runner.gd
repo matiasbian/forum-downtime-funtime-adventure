@@ -33,7 +33,7 @@ var tw_cursor = 0
 var wait_for_key = false
 var wait_for_key_clear = false
 const tw_speed = 10#typewriter speed will change (goes faster when player press action key)
-const tw_spd_multi = 5#typewriter speed multiplier when action key or mouse is pressed
+const tw_spd_multi = 10#typewriter speed multiplier when action key or mouse is pressed
 
 func insert_storyboard(text, orator):
 	var position = storyboard.size()
@@ -86,16 +86,20 @@ func awake(action_id):#there's a request for a scene
 
 	set_process(true)
 	###storyboard builder
+
+
+
 	#player speech: the first one to speak
+
+
 	if typeof(line["q"]) == 21:#if the question is an array, only the last one will be shown
 		var size = line["q"].size() -1
 		insert_storyboard(line["q"][size], null)
 	else:
 		insert_storyboard(line["q"], null)
 	
-	
 	#npc speech
-	if line.has("a"):#npc direct answer is not mandatory as cinematic or no-reply may be userd
+	if line.has("a"):#npc direct answer is not mandatory as cinematic or no-reply may be used
 		if typeof(line["a"]) == 21:
 			for i in range(line["a"].size()):
 				insert_storyboard(line["a"][i], line["npc"])

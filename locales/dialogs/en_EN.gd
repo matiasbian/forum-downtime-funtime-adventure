@@ -35,8 +35,8 @@ var dialogue = [
           {"speaker":"player","text":"Gulp."}],
 
      "enabled"    : false,
-     "activate"   : 3,
      "disable"    : 2,
+	"activate"	  : 3,
      }
      ,{
      "id"         : 2,
@@ -49,7 +49,17 @@ var dialogue = [
     
      "enabled"    : false,#								if the line is enabled from new game
      "disable"    : 1,#other lines to be disable other lines (the picked one is always disabled)
-     }
+	"activate"   : 3,
+	} 
+     ,{
+     "id"         : 3,
+     "npc"        : "frontiersman_steeltrap",
+     "q"          : "room steeltrap",#	quick and dirty room change code is in dialogue_base.gd
+    
+     "enabled"    : false,#								if the line is enabled from new game
+     "disable"    : 2,#other lines to be disable other lines (the picked one is always disabled)
+	} 
+
 
 ]
 
@@ -66,4 +76,5 @@ func refreshdb():#refresh the database with this translation
 	for i in range(dialogue.size()):
 		database.dialogue[i]["q"] = dialogue[i]["q"]
 		database.dialogue[i]["a"] = dialogue[i]["a"]
+		database.dialogue[i]["newscene"] = dialogue[i]["newscene"]
 	queue_free()
