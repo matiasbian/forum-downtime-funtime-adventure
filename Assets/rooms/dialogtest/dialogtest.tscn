@@ -55,7 +55,7 @@ script/script = ExtResource( 5 )
 
 [node name="player" parent="World" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 565.769, 653.159 )
+transform/pos = Vector2( 566.769, 642.159 )
 terrainPath = NodePath("../bg")
 
 [node name="Timer" type="Timer" parent="."]
