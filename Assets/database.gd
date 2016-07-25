@@ -65,7 +65,7 @@ func translate_dialogues(language):
 			return
 		#find the npc, find the id
 #		print("original \n" +str(dialogue))
-		for b in range(dialogue.size()):
+		for b in range(42):
 			if dialogue[b].has("id") and dialogue[b].has("npc"):
 				if (dialogue[b]["id"] == translation_row["id"]) and (dialogue[b]["npc"] == translation_row["npc"]):
 #					print(str(dialogue[b]["id"])+ " and " + str(translation_row["id"]))

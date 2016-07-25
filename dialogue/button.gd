@@ -99,7 +99,7 @@ func status_standby(delta):#button is waiting for order // switchable
 
 func status_picked(delta):#button is selected by player // rien ne va plus 
 
-#################fx module######make it bright before die
+#################fx module######make it bright before it dies
 	var opacity = get_opacity()#		
 	set_opacity(opacity+1*delta)#		
 	if opacity < 1.5:#					
@@ -129,9 +129,10 @@ func ui_fix(previous):
 	size.y *= rows
 	set_size(size)
 
+
 	if previous != null:
 		var pos = get_pos()
-		pos.y = previous.get_size().y + previous.get_pos().y+  up_border
+		pos.y = previous.get_size().y -35 + previous.get_pos().y -35 +  up_border
 		set_pos(pos)
 	var new_y_size = get_pos().y + size.y
 	sorter.set_custom_minimum_size(Vector2(0,new_y_size))
