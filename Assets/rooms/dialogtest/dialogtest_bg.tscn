@@ -44,11 +44,10 @@ z/relative = false
 visibility/light_mask = 524288
 z/relative = false
 script/script = ExtResource( 5 )
-canvasmodulatePath = "../CanvasModulate"
+canvasmodulatePath = "../../CanvasModulate"
 
 [node name="mask_chair" type="Light2D" parent="Masks"]
 
-editor/display_folded = true
 visibility/light_mask = 0
 transform/pos = Vector2( 640, 400 )
 z/relative = false

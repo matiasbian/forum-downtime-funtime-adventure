@@ -8,6 +8,7 @@ extends Node
 var dialogue = [
 #		frontiersman_steeltrap lines
 
+
      {
      "id"         : 0,#internal ID for frontiersman_steeltrap dialogues
      "npc"        : "frontiersman_steeltrap",#npc who says this line
@@ -18,7 +19,7 @@ var dialogue = [
 
     
      "enabled"    : true,#if the line is enabled from the beginning of a new game
-     "activate"   : [1,2,3],#picking this line will enable other lines (relative to current npc)
+     "activate"   : [1,2,3,],#picking this line will enable other lines (relative to current npc) #Klein, hamster, costume
      "disable"    : null,#other lines to be disable other lines (the picked one is always disabled)
      }
      ,{
@@ -44,7 +45,7 @@ var dialogue = [
 
      "enabled"    : false,
      "disable"    : [2,3],
-	"activate"	  : [4,6,7],
+	"activate"	  : [4,6],#trap, safety
      }
      ,{
      "id"         : 2,
@@ -58,7 +59,7 @@ var dialogue = [
     
      "enabled"    : false,
      "disable"    : [1,3],
-	"activate"   : 4,
+	"activate"   : 4,#trap
 	} 
      ,{
      "id"         : 3,
@@ -86,13 +87,13 @@ var dialogue = [
           {"speaker":"frontiersman_steeltrap","text":"MECHA PAUL BUNION!"},
           {"speaker":"frontiersman_steeltrap","text":"I figured I might as well let Paul here do the honors of finishing"},
           {"speaker":"frontiersman_steeltrap","text":"Klein off, on account of the good inspector deciding to close down"},
-          {"speaker":"frontiersman_steeltrap","text":"Paul Bunion’s Authentic Clear Cuttin' and log Spittin' show"},
+          {"speaker":"frontiersman_steeltrap","text":"Paul Bunion’s Authentic Clear Cuttin' and Log Splittin' Show"},
           {"speaker":"frontiersman_steeltrap","text":"because of a few splinters."},
           {"speaker":"player","text":"A tree branch is not a splinter."},
           {"speaker":"frontiersman_steeltrap","text":"Details."}],   
      "enabled"    : false,
      "disable"    : [1,2,3],
-	"activate"   : 5,
+	"activate"   : 5, #robot
 	} 
 	     ,{
      "id"         : 5,
@@ -108,7 +109,7 @@ var dialogue = [
           {"speaker":"frontiersman_steeltrap","text":"no good, interfering safety inspector."}],
      "enabled"    : false,
      "disable"    : [1,2,3,4],
-	"activate"   : 6,
+	"activate"   : [6,7], #safety, trick villain
 		 }
 	     ,{
      "id"         : 6,
@@ -128,41 +129,147 @@ var dialogue = [
           {"speaker":"frontiersman_steeltrap","text":"is getting a steady supply of new customers. But I’ve got"},
           {"speaker":"frontiersman_steeltrap","text":"some new ads going that are workin' just fine on that front."}],
      "enabled"    : false,
-     "disable"    : [1,2,3,4],
-	"activate"   : 7,
-	} 	 	
-	     ,{
+     "disable"    : [1,2,3,4,5],
+	 "activate"   : [7,8], #trick villain, death
+		  }
+			     ,{
      "id"         : 7,
      "npc"        : "frontiersman_steeltrap",
-     "q"          : "Let me guess, you’re the one behind the hypno ads that’ve been showing up around here.",
-     "a"          : ["So?"],
+     "q"          : "You're thrifty. I get that.",
      "cinematic"  : [
-          {"speaker":"player","text":"''So?'' Your park is a deathtrap! There’s a log"},
-          {"speaker":"player","text":"flume running through an active saw mill, the"},
-          {"speaker":"player","text":"hall of giant spherical objects is dangerously"},
-          {"speaker":"player","text":"unsecured and full of ramps, and the gophers"},
-          {"speaker":"player","text":"are able to freely leave their enclosure to"},
-          {"speaker":"player","text":"rob banks and hold people for ransom!"},
-          {"speaker":"player","text":"Are you trying to kill your customers?"},
-          {"speaker":"frontiersman_steeltrap","text":"If they can’t leave, they can’t spend their money elsewhere."},
-          {"speaker":"frontiersman_steeltrap","text":"It’s just good business sense little lady. The only hard part"},
-          {"speaker":"frontiersman_steeltrap","text":"is getting a steady supply of new customers. But I’ve got"},
-          {"speaker":"frontiersman_steeltrap","text":"some new ads going that are workin' just fine on that front."}],
+          {"speaker":"player","text":"You want to save all the money you can by getting great deals. I do too."},
+          {"speaker":"player","text":"Like this morning, I was just on wePay looking at an auction for a dozen"},
+          {"speaker":"player","text":"claw machines. Last I looked, it had no bids, and it had a minimum of "},
+          {"speaker":"player","text":"only a dollar. It's a shame I can't get to a computer right now, as the "},
+          {"speaker":"player","text":"auction is going to end in about thirty minutes."},
+          {"speaker":"frontiersman_steeltrap","text":"Paul, you guard the prisoner."}, 
+          {"speaker":"frontiersman_steeltrap","text":"I have some urgent matters I need to attend to."}],
+     "enabled"    : false,
+     "disable"    : [1,2,3,4,5,6,7],
+	"activate"   : 43, #go to steeltrap_emptymonitor room
+		 }
+	     ,{
+     "id"         : 7, #death path - the choice has to be crazy enough to choose that it is obvious it leads to death
+     "npc"        : "frontiersman_steeltrap",
+     "q"          : "You're under arrest.\nI know you're behind\nthose hypnotic ads.",
+     "a"          : ["Don’t be stupid girl. Everyone knows hypnotism is bupkis."],
+     "cinematic"  : [
+          {"speaker":"frontiersman_steeltrap","text":"All my ads do is plant subliminal messages in folk’s subconscious,"},
+          {"speaker":"frontiersman_steeltrap","text":"makin them drop what they’re doin an' bring their life savings"},
+          {"speaker":"frontiersman_steeltrap","text":"down to Frontier World and Action Park for some good family"},
+          {"speaker":"frontiersman_steeltrap","text":"entertainment. It can take a few viewings for 'em to work, but the"},
+          {"speaker":"frontiersman_steeltrap","text":"billboards work every time, thanks to the little radio transmitters"},
+          {"speaker":"frontiersman_steeltrap","text":"I stuck in ‘em. Once I launch a satellite over the U S of A,"},
+          {"speaker":"frontiersman_steeltrap","text":"I’ll get people comin' in from all over the country. Heck, "},
+          {"speaker":"frontiersman_steeltrap","text":"I’ll probably get even get some Canadians. Once I get enough"},
+          {"speaker":"frontiersman_steeltrap","text":"money, an' dispose of that annoyin' Inspector,"},
+          {"speaker":"frontiersman_steeltrap","text":"I’ll finally be able to open up that miniature golf course"},
+          {"speaker":"frontiersman_steeltrap","text":"my pa always talked about buildin'."},
+          {"speaker":"player","text":"That's insane!"},
+          {"speaker":"frontiersman_steeltrap","text":"What? Oh, well, darn. Looks like ya got me to tell ya my plans."},
+          {"speaker":"frontiersman_steeltrap","text":"Can’t risk lettin ya escape now."},
+          {"speaker":"frontiersman_steeltrap","text":"Paul, let 'er have it."}],
+
      "enabled"    : false,
      "disable"    : [1,2,3,4],
-	"activate"   : 7,
-	} 	 	
+	"activate"   : 42, #go to free walk for now - need to add bad ending - as well as the solution and good ending
+			} 	 	
 	     ,{
      "id"         : 42,
      "npc"        : "frontiersman_steeltrap",
      "q"          : "room steeltrap",#	quick and dirty room change code is in dialogue_base.gd
     
      "enabled"    : false,
+	} 	     ,{
+     "id"         : 43,
+     "npc"        : "frontiersman_steeltrap",
+     "q"          : "room pb_in_chair",#	can look around freely, but still in the chair
+    
+     "enabled"    : false,
 	} 
 
 
-]
+#pb_in_chair lines
 
+     ,{
+     "id"         : 0,#internal ID for inchair_steeltrap dialogues
+     "npc"        : "pb_in_chair",#npc who says this line
+     "q"          : "Hello Paul Bunyan.",#player dialogue
+     "a"          : "...",#npc dialogue
+
+    
+     "enabled"    : true,#if the line is enabled from the beginning of a new game
+     "activate"   : [2,4,5],#picking this line will enable other lines (relative to current npc) #don't talk
+     "disable"    : [1],#other lines to be disable other lines (the picked one is always disabled)
+     }
+     ,{
+     "id"         : 1,
+     "npc"        : "pb_in_chair",
+     "q"          : ["How are you doing, Paul?"],
+     "a"          : "...",
+
+     "enabled"    : true,
+     "disable"    : [0],
+	"activate"	  : [2,4,5],#don't talk, insult, apologize
+     }
+     ,{
+     "id"         : 2,
+     "npc"        : "pb_in_chair",
+     "q"          : ["You don't talk much do you?"],
+     "a"          : "...",
+
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [4,5],#insult, apologize
+     }	
+     ,{
+     "id"         : 3,
+     "npc"        : "pb_in_chair",
+     "q"          : ["You don't talk much do you?"],
+     "a"          : "...",
+
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [4,5],#insult, apologize
+     }	     
+     ,{
+     "id"         : 4,
+     "npc"        : "pb_in_chair",
+     "q"          : ["You're not so great."],
+     "cinematic"  : [
+         {"speaker":"player","text":"You haven't done much besides stand there."},
+         {"speaker":"player","text":"The real Paul Bunyan would be ashamed."},
+         {"speaker":"player","text":"I bet that got your attention..."},
+         {"speaker":"inchair_steeltrap","text":"Grr..."},
+         {"speaker":"player","text":"Uh oh..."}],
+
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [42],#go to the steeltrap room for now
+     }	
+     ,{
+     "id"         : 5,
+     "npc"        : "pb_in_chair",
+     "q"          : ["Well, I see you don't want to talk."],
+     "cinematic"  : [
+         {"speaker":"player","text":"I'll leave you alone now. Sorry I disturbed you."}],
+
+
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [42],#go to the steeltrap room for now
+     }	
+
+#Scene changes
+
+	     ,{
+     "id"         : 42,
+     "npc"        : "pb_in_chair",
+     "q"          : "room steeltrap",#	quick and dirty room change code is in dialogue_base.gd
+    
+     "enabled"    : false,
+	} 
+]
 
 
 

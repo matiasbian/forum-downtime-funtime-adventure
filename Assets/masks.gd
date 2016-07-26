@@ -1,12 +1,12 @@
 
 extends Node2D
 
-export(NodePath) var canvasmodulatePath = "../CanvasModulate"
+export(NodePath) var canvasmodulatePath = "../../CanvasModulate"
 
 func init_masks():
 	for n in get_children():
 		if (n extends Light2D):
-			var pos2DZ = n.get_node("Position2D").get_global_pos()
+			var pos2DZ = n.get_node("../mask_chair/Position2D").get_global_pos()
 			var scale = get_node("..").get_z_at_px( pos2DZ )
 			n.set_z_range_min( 1 ) 
 			n.set_z_range_max( scale-1 ) 
