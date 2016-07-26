@@ -9,7 +9,7 @@ export (String,FILE) var ScriptRes = ""
 var actions = {} setget set_actions,get_actions
 
 var pointing # is the player pointing this hotspot with mouse?
-
+	
 func get_interact_pos():
 	if has_node("interactpos"):
 		#print("Object ", name, " Pos=", get_node("interactpos").get_global_pos())
@@ -22,7 +22,12 @@ func _input_event( viewport, event, shape_idx ):
 	if event.is_pressed() and event.button_index == BUTTON_LEFT:
 		#print("INPUT")
 		#get_tree().call_group(0, "Actors", "_go_to_object", get_interact_pos(), self, animation_arrived)
-		get_node("../../../player")._go_to_object(get_interact_pos(), self, animation_arrived)
+		if name == "Uncomfortable Chair":
+			get_node("../../../player").			_go_to_object(get_interact_pos(), self, animation_arrived)
+			get_node("/root/constants").setScene("res://Assets/rooms/pb_chair_down/pb_chair_down.tscn") 
+
+		else:
+			get_node("../../../player").			_go_to_object(get_interact_pos(), self, animation_arrived)
 
 func prepare_object_script():
 	var file = File.new()
@@ -39,6 +44,7 @@ func on_mouse_exit_object():
 	get_tree().call_group(0, "GUI", "on_mouse_exit_object")
 
 func _ready():
+
 	connect("mouse_enter", self, "on_mouse_enter_object", [name])
 	connect("mouse_exit", self, "on_mouse_exit_object")
 	connect("input_event", self, "_input_event")

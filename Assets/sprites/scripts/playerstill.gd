@@ -67,10 +67,10 @@ func say_line(arr_lines):
 		wait_time = 2.0
 	timerNode.set_wait_time(wait_time)
 	timerNode.start()
-	get_node("dialog").set_text(str(current_line)+": " + text)
+	get_node("dialog").set_text(" " + text)
 
 func on_dialog_line_timeout():
-	print("Warning: player.gd: dialog line timeout.")
+	#print("Warning: player.gd: dialog line timeout.")
 	get_node("dialog").set_text("")
 	timerNode.stop()
 	current_line += 1
@@ -82,7 +82,7 @@ func add_return_on_first_space(text, start_pos):
 
 func _process(delta):
 	arrived_to_destination = false
-	set_scale(terrain.get_scale(get_global_pos()))
+	#set_scale(terrain.get_scale(get_global_pos()))
 	
 	if (path.size()>1):
 		#print(speed)

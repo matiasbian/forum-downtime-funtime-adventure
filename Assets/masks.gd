@@ -4,6 +4,7 @@ extends Node2D
 export(NodePath) var canvasmodulatePath = "../../CanvasModulate"
 
 func init_masks():
+	
 	for n in get_children():
 		if (n extends Light2D):
 			var pos2DZ = n.get_node("../mask_chair/Position2D").get_global_pos()

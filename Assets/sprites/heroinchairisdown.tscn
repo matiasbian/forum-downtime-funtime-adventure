@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/sprites/scripts/playerstill.gd" type="Script" id=1]
 [ext_resource path="res://Assets/fonts/DejaVuSans/DejaVuSans.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/sprites/hero/shadow.tres" type="Shader" id=3]
-[ext_resource path="res://Assets/sprites/hero/png/chair/00.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sprites/hero/png/chair/01.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
