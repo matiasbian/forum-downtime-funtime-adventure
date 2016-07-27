@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 ### NODES
-onready var tester = get_node("../../World/DebugNode")
+onready var tester = get_node("../DebugNode")
 export(NodePath) var terrainPath
 onready var terrain = get_node(terrainPath) # "bg"
 var animNode = "sprite/anim"
@@ -70,7 +70,7 @@ func say_line(arr_lines):
 	get_node("dialog").set_text(" " + text)
 
 func on_dialog_line_timeout():
-	#print("Warning: player.gd: dialog line timeout.")
+	print("Warning: player.gd: dialog line timeout.")
 	get_node("dialog").set_text("")
 	timerNode.stop()
 	current_line += 1
@@ -82,7 +82,7 @@ func add_return_on_first_space(text, start_pos):
 
 func _process(delta):
 	arrived_to_destination = false
-	#set_scale(terrain.get_scale(get_global_pos()))
+	set_scale(terrain.get_scale(get_global_pos()))
 	
 	if (path.size()>1):
 		#print(speed)
@@ -205,10 +205,9 @@ func _update_scale(pos):
 
 # update Z-index
 func _update_z():
-	#var z = terrain.get_z_at_px(get_pos())
-	#set_z(z)
-	return
-	
+	var z = terrain.get_z_at_px(get_pos())
+	set_z(z)
+
 # update speed according to distance to camera
 # the closer the player, the biggest his speed
 func _update_speeddepth(begin, end):
