@@ -284,6 +284,9 @@ func deliver_button(id):#this is the function who "send the pick button" in the 
 	elif (text == "room steeltrap"):
 		get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn")
 	
+	elif (text == "room tempending2"):
+		get_node("/root/constants").setScene("res://Assets/rooms/ending2/ending2.tscn")
+
 	else:
 		button.text = text#button text goes here
 		button.base = get_node(".")#when button need to access to dialogue main node (sorter_fillup array etc)

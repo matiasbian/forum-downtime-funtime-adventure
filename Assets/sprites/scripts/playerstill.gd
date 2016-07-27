@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 ### NODES
-onready var tester = get_node("../DebugNode")
+onready var tester = get_node("../../World/DebugNode")
 export(NodePath) var terrainPath
 onready var terrain = get_node(terrainPath) # "bg"
 var animNode = "sprite/anim"
@@ -205,9 +205,10 @@ func _update_scale(pos):
 
 # update Z-index
 func _update_z():
-	var z = terrain.get_z_at_px(get_pos())
-	set_z(z)
-
+	#var z = terrain.get_z_at_px(get_pos())
+	#set_z(z)
+	return
+	
 # update speed according to distance to camera
 # the closer the player, the biggest his speed
 func _update_speeddepth(begin, end):
