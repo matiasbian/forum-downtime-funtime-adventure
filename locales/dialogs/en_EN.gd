@@ -26,7 +26,7 @@ var dialogue = [
      "id"         : 1,
      "npc"        : "frontiersman_steeltrap",
      "q"          : ["Who's Inspector Klein?"],
-     "a"          : ["Ha! Ya hear that, Paul? Rodent girl here doesn t know about Klein."],
+     "a"          : ["Ha! Ya hear that, Paul? Rodent girl here doesn't know about Klein."],
      "cinematic"  : [
           {"speaker":"frontiersman_steeltrap","text":"He's the worst! A pox on the face of wholesome family entertainment!"},
           {"speaker":"frontiersman_steeltrap","text":"Always tryin' to shut me down. It's a disgrace!"},
