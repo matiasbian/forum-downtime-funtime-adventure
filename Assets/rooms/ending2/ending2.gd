@@ -1,10 +1,10 @@
-extends Node
+extends Sprite
 
-func _input(event):
-		if event.type == InputEvent.KEY && event.is_pressed():
-			if(event.scancode == KEY_ESCAPE):
-				get_tree().quit()
+var count = 0
 
 func _ready():
-   set_process_input(true)
-   
+	pass
+
+func _on_Timer_timeout():
+	count += 1
+	get_node("/root/constants").setScene("res://Assets/rooms/credits/credits.tscn") 
