@@ -146,7 +146,7 @@ var dialogue = [
           {"speaker":"frontiersman_steeltrap","text":"I have some urgent matters I need to attend to."}],
      "enabled"    : false,
      "disable"    : [1,2,3,4,5,6,7],
-	"activate"   : 43, #go to steeltrap_emptymonitor room
+	"activate"   : 41, #go to steeltrap_emptymonitor room
 		 }
 	     ,{
      "id"         : 7, #death path - the choice has to be crazy enough to choose that it is obvious it leads to death
@@ -176,16 +176,17 @@ var dialogue = [
 
      "enabled"    : false,
      "disable"    : [1,2,3,4],
-	"activate"   : 42, #go to free walk for now - need to add bad ending - as well as the solution and good ending
+	"activate"   : 40, #go to temporary bad ending
 			} 	 	
 	     ,{
-     "id"         : 42,
+     "id"         : 40,
      "npc"        : "frontiersman_steeltrap",
-     "q"          : "room tempending2",#	quick and dirty room change code is in dialogue_base.gd
+     "q"          : "room tempending1",#	quick and dirty room change code is in dialogue_base.gd
     
      "enabled"    : false,
-	} 	     ,{
-     "id"         : 43,
+	}
+ 	     ,{
+     "id"         : 41,
      "npc"        : "frontiersman_steeltrap",
      "q"          : "room pb_in_chair",#	can look around freely, but still in the chair
     
@@ -224,44 +225,57 @@ var dialogue = [
 
      "enabled"    : false,
      "disable"    : null,
-	"activate"	  : [4,5],#insult, apologize
-     }	
+	"activate"	  : [3,5,4],#insult, apologize
+     }		     
      ,{
      "id"         : 3,
-     "npc"        : "pb_in_chair",
-     "q"          : ["You don't talk much do you?"],
-     "a"          : "...",
-
-     "enabled"    : false,
-     "disable"    : null,
-	"activate"	  : [4,5],#insult, apologize
-     }	     
-     ,{
-     "id"         : 4,
      "npc"        : "pb_in_chair",
      "q"          : ["You're not so great."],
      "cinematic"  : [
          {"speaker":"player","text":"You haven't done much besides stand there."},
          {"speaker":"player","text":"The real Paul Bunyan would be ashamed."},
          {"speaker":"player","text":"I bet that got your attention..."},
-         {"speaker":"inchair_steeltrap","text":"Grr..."},
+         {"speaker":"pb_in_chair","text":"Grr..."},
          {"speaker":"player","text":"Uh oh..."}],
 
      "enabled"    : false,
      "disable"    : null,
-	"activate"	  : [42],#go to the steeltrap room for now
+	"activate"	  : [43],#go to the temp ending 2 for now
      }	
      ,{
-     "id"         : 5,
+     "id"         : 4,
      "npc"        : "pb_in_chair",
      "q"          : ["Well, I see you don't want to talk."],
      "cinematic"  : [
-         {"speaker":"player","text":"I'll leave you alone now. Sorry I disturbed you."}],
+         {"speaker":"player","text":"I'll leave you alone now. Sorry I disturbed you."},
+         {"speaker":"pb_in_chair","text":"..."}],
 
 
      "enabled"    : false,
      "disable"    : null,
-	"activate"	  : [42],#go to the steeltrap room for now
+	"activate"	  : [42],#go back to talk on the chair
+     }	
+     ,{
+     "id"         : 5,
+     "npc"        : "pb_in_chair",
+     "q"          : ["Home, home on the range."],
+     "cinematic"  : [
+         {"speaker":"pb_in_chair","text":"Where the deer and the antelope play"}],
+ 
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [3,6,4],#go to the steeltrap room for now
+     }	
+     ,{
+     "id"         : 6,
+     "npc"        : "pb_in_chair",
+     "q"          : ["Where seldom is heard a discouraging word."],
+     "cinematic"  : [
+         {"speaker":"pb_in_chair","text":"And the skies are not cloudy all day."}],
+ 
+     "enabled"    : false,
+     "disable"    : null,
+	"activate"	  : [3,4],#go to the steeltrap room for now
      }	
 
 #Scene changes
@@ -269,10 +283,17 @@ var dialogue = [
 	     ,{
      "id"         : 42,
      "npc"        : "pb_in_chair",
-     "q"          : "room steeltrap",#	quick and dirty room change code is in dialogue_base.gd
+     "q"          : "room pb_in_chair",#	quick and dirty room change code is in dialogue_base.gd
     
      "enabled"    : false,
 	} 
+		     ,{
+     "id"         : 43,
+     "npc"        : "pb_in_chair",
+     "q"          : "room tempending2",#	quick and dirty room change code is in dialogue_base.gd
+    
+     "enabled"    : false,
+	}
 ]
 
 

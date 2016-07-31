@@ -39,7 +39,7 @@ func _enter_tree():#index the database
 	picker = get_node("choice_picker")
 	sorter = get_node("choice_picker/sorter")
 	textfield_player = get_node("hero_speech")
-	textfield_npc = get_node("npc_speech")
+	textfield_npc = get_node("bunyan_speech")
 	set_process_input(true)
 	set_process(true)
 	index()
@@ -282,8 +282,6 @@ func deliver_button(id):#this is the function who "send the pick button" in the 
 		get_node("/root/constants").setScene("res://Assets/rooms/pb_in_chair/pb_in_chair.tscn") 
 	elif (text == "room steeltrap"):
 		get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn")
-	elif (text == "room tempending1"):
-		get_node("/root/constants").setScene("res://Assets/rooms/ending1/ending1.tscn")
 	elif (text == "room tempending2"):
 		get_node("/root/constants").setScene("res://Assets/rooms/ending2/ending2.tscn")
 

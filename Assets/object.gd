@@ -29,7 +29,7 @@ func _input_event( viewport, event, shape_idx ):
 			get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn") 
 
 		if name == "Mechanized Paul Bunyan":
-			get_node("/root/constants").setScene("res://Assets/rooms/ending1/ending1.tscn") 
+			get_node("/root/constants").setScene("res://Assets/rooms/bunyan_dialog/bunyan_dialog.tscn") 
 
 		else:
 			get_node("../../../player").			_go_to_object(get_interact_pos(), self, animation_arrived)
