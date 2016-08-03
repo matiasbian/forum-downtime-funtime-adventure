@@ -148,6 +148,7 @@ enabled = true
 
 [node name="Lights" parent="." instance=ExtResource( 4 )]
 
+visibility/visible = false
 z/relative = false
 
 [node name="Masks" type="Node2D" parent="."]
@@ -190,6 +191,7 @@ transform/scale = Vector2( 2.35, 1.95001 )
 [node name="mask_foreground" type="Light2D" parent="Masks"]
 
 transform/pos = Vector2( 641, 399 )
+z/z = 1
 enabled = true
 texture = ExtResource( 7 )
 offset = Vector2( 0, 0 )
@@ -425,9 +427,9 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 8 )
-name = "Bunyan Sized Hole"
+name = "Mechanized Paul Bunyan"
 animation_arrived = "idle_rightfront"
-ScriptRes = "res://Assets/rooms/steeltrap/objects/bunyanhole.json"
+ScriptRes = "res://Assets/rooms/steeltrap/objects/mechabunyan.json"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hotspots/bunyanhole"]
 
@@ -462,6 +464,7 @@ script/script = ExtResource( 10 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
+visibility/visible = false
 color = Color( 0.313726, 0.313726, 0.313726, 1 )
 
 
