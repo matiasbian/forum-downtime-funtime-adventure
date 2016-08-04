@@ -25,11 +25,14 @@ func _input_event( viewport, event, shape_idx ):
 		if name == "Uncomfortable Chair":
 			get_node("/root/constants").setScene("res://Assets/rooms/pb_chair_down/pb_chair_down.tscn") 
 
-		if name == "Very Uncomfortable Chair":
-			get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn") 
-
 		if name == "Mechanized Paul Bunyan":
 			get_node("/root/constants").setScene("res://Assets/rooms/bunyan_dialog/bunyan_dialog.tscn") 
+
+		if name == "Mecha Paul Bunyan":
+			get_node("/root/constants").setScene("res://Assets/rooms/bunyan_dialog/bunyan_final.tscn") 
+
+		if name == "Bunyan Sized Hole":
+			get_node("/root/constants").setScene("res://Assets/rooms/ending3/ending3.tscn") 
 
 		else:
 			get_node("../../../player").			_go_to_object(get_interact_pos(), self, animation_arrived)

@@ -405,7 +405,7 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 8 )
-name = "Mechanized Paul Bunyan"
+name = "Mecha Paul Bunyan"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/pb_chair_down/objects/mechabunyan.json"
 

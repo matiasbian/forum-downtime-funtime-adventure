@@ -234,7 +234,6 @@ var dialogue = [
      "cinematic"  : [
          {"speaker":"player","text":"You haven't done much besides stand there."},
          {"speaker":"player","text":"The real Paul Bunyan would be ashamed."},
-         {"speaker":"player","text":"I bet that got your attention..."},
          {"speaker":"pb_in_chair","text":"Grr..."},
          {"speaker":"player","text":"Uh oh..."}],
 
@@ -294,9 +293,56 @@ var dialogue = [
     
      "enabled"    : false,
 	}
+
+#pb_final lines
+
+     ,{
+     "id"         : 0,#internal ID for inchair_steeltrap dialogues
+     "npc"        : "pb_final",#npc who says this line
+     "q"          : "Can you help me up please?",#player dialogue
+     "a"          : "...",#npc dialogue
+
+    
+     "enabled"    : true,#if the line is enabled from the beginning of a new game
+     "activate"   : [1],#picking this line will enable other lines (relative to current npc) #don't talk
+     "disable"    : [0],#other lines to be disable other lines (the picked one is always disabled)
+     }
+     ,{
+     "id"         : 1,
+     "npc"        : "pb_final",
+     "q"          : ["Fine. Be that way."],
+     "a"          : "...",
+
+     "enabled"    : true,
+     "disable"    : [0],
+	"activate"	  : [2],#insult
+     }		     
+     ,{
+     "id"         : 2,
+     "npc"        : "pb_final",
+     "q"          : ["You're not so great."],
+     "cinematic"  : [
+         {"speaker":"player","text":"You haven't done much besides stand there."},
+         {"speaker":"player","text":"The real Paul Bunyan would be ashamed."},
+         {"speaker":"pb_final","text":"Grr..."},
+         {"speaker":"player","text":"Ah ha! You freed me!"},
+         {"speaker":"pb_final","text":"Crap. The Frontiersman will demote me for this! I'm outta here!"}],
+
+     "enabled"    : true,
+     "disable"    : null,
+	"activate"	  : [44],#go to the temp ending 2 for now
+     }	
+	
+#Scene change
+
+    ,{
+     "id"         : 44,
+     "npc"        : "pb_final",
+     "q"          : "room steeltrap",#	quick and dirty room change code is in dialogue_base.gd
+    
+     "enabled"    : false,
+	}
 ]
-
-
 
 
 func newgame():

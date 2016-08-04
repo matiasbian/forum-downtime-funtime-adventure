@@ -427,7 +427,7 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 8 )
-name = "Mechanized Paul Bunyan"
+name = "Bunyan Sized Hole"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/mechabunyan.json"
 

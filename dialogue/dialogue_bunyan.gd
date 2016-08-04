@@ -284,6 +284,8 @@ func deliver_button(id):#this is the function who "send the pick button" in the 
 		get_node("/root/constants").setScene("res://Assets/rooms/steeltrap/steeltrap.tscn")
 	elif (text == "room tempending2"):
 		get_node("/root/constants").setScene("res://Assets/rooms/ending2/ending2.tscn")
+	elif (text == "room bunyanfinal"):
+		get_node("/root/constants").setScene("res://Assets/rooms/bunyan_dialog/bunyan_final.tscn")
 
 	else:
 		button.text = text#button text goes here
