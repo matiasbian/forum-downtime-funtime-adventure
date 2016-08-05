@@ -204,7 +204,7 @@ var dialogue = [
 
     
      "enabled"    : true,#if the line is enabled from the beginning of a new game
-     "activate"   : [2,4,5],#picking this line will enable other lines (relative to current npc) #don't talk
+     "activate"   : [2,4],#picking this line will enable other lines (relative to current npc) #don't talk
      "disable"    : [1],#other lines to be disable other lines (the picked one is always disabled)
      }
      ,{
@@ -215,7 +215,7 @@ var dialogue = [
 
      "enabled"    : true,
      "disable"    : [0],
-	"activate"	  : [2,4,5],#don't talk, insult, apologize
+	"activate"	  : [2,4],#don't talk, insult, apologize
      }
      ,{
      "id"         : 2,
@@ -313,7 +313,7 @@ var dialogue = [
      "q"          : ["Fine. Be that way."],
      "a"          : "...",
 
-     "enabled"    : true,
+     "enabled"    : false,
      "disable"    : [0],
 	"activate"	  : [2],#insult
      }		     
