@@ -1,15 +1,13 @@
-[gd_scene load_steps=34 format=1]
+[gd_scene load_steps=32 format=1]
 
 [ext_resource path="res://Assets/rooms/steeltrap/bg.jpg" type="Texture" id=1]
 [ext_resource path="res://Assets/terrain.gd" type="Script" id=2]
 [ext_resource path="res://Assets/rooms/steeltrap/depth.png" type="Texture" id=3]
 [ext_resource path="res://Assets/rooms/steeltrap/lights.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/masks.gd" type="Script" id=5]
-[ext_resource path="res://Assets/rooms/steeltrap/maskInvertAlpha.png" type="Texture" id=6]
-[ext_resource path="res://Assets/rooms/steeltrap/maskInvertAlphaFg.png" type="Texture" id=7]
-[ext_resource path="res://Assets/object.gd" type="Script" id=8]
-[ext_resource path="res://Assets/fonts/DejaVuSans.fnt" type="BitmapFont" id=9]
-[ext_resource path="res://Assets/debuglabel.gd" type="Script" id=10]
+[ext_resource path="res://Assets/object.gd" type="Script" id=5]
+[ext_resource path="res://Assets/fonts/DejaVuSans.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://Assets/debuglabel.gd" type="Script" id=7]
+[ext_resource path="res://Assets/rooms/steeltrap/maskFg.png" type="Texture" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -148,68 +146,9 @@ enabled = true
 
 [node name="Lights" parent="." instance=ExtResource( 4 )]
 
-visibility/visible = false
-z/relative = false
-
-[node name="Masks" type="Node2D" parent="."]
-
-visibility/light_mask = 524288
-z/relative = false
-script/script = ExtResource( 5 )
-canvasmodulatePath = "../../CanvasModulate"
-
-[node name="mask_chair" type="Light2D" parent="Masks"]
-
-visibility/light_mask = 0
-transform/pos = Vector2( 640, 400 )
-z/relative = false
-enabled = true
-texture = ExtResource( 6 )
-offset = Vector2( 0, 0 )
-scale = 1.0
-color = Color( 0.431373, 0.431373, 0.431373, 1 )
-energy = 1.0
-mode = 3
-range/height = 0.0
-range/z_min = 1
-range/z_max = 1
-range/layer_min = 0
-range/layer_max = 0
-range/item_mask = 1
-shadow/enabled = false
-shadow/color = Color( 1, 1, 1, 0 )
-shadow/buffer_size = 2048
-shadow/esm_multiplier = 80.0
-shadow/item_mask = 524288
-__meta__ = { "_edit_lock_":true }
-
-[node name="Position2D" type="Position2D" parent="Masks/mask_chair"]
-
-transform/pos = Vector2( 42.5001, 283.5 )
-transform/scale = Vector2( 2.35, 1.95001 )
-
-[node name="mask_foreground" type="Light2D" parent="Masks"]
-
-transform/pos = Vector2( 641, 399 )
+visibility/visible = true
 z/z = 1
-enabled = true
-texture = ExtResource( 7 )
-offset = Vector2( 0, 0 )
-scale = 1.0
-color = Color( 1, 1, 1, 1 )
-energy = 0.4
-mode = 3
-range/height = 0.0
-range/z_min = 1
-range/z_max = 1024
-range/layer_min = 0
-range/layer_max = 0
-range/item_mask = 1
-shadow/enabled = false
-shadow/color = Color( 0, 0, 0, 0 )
-shadow/buffer_size = 2048
-shadow/esm_multiplier = 80.0
-shadow/item_mask = 1
+z/relative = false
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -231,7 +170,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Lamp"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/lamp.json"
@@ -251,7 +190,7 @@ transform/pos = Vector2( -180.426, 212.3 )
 
 [node name="television" type="Area2D" parent="Hotspots"]
 
-transform/pos = Vector2( 1181.35, 403.145 )
+transform/pos = Vector2( 1176.35, 398.145 )
 transform/scale = Vector2( 1, 0.997406 )
 input/pickable = true
 shapes/0/shape = SubResource( 5 )
@@ -270,7 +209,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Television"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/television.json"
@@ -307,7 +246,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Lamp"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/lamp.json"
@@ -350,7 +289,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Video Camera"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/camera.json"
@@ -387,7 +326,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Chair"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/chair.json"
@@ -426,7 +365,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 5 )
 name = "Bunyan Sized Hole"
 animation_arrived = "idle_rightfront"
 ScriptRes = "res://Assets/rooms/steeltrap/objects/mechabunyan.json"
@@ -455,16 +394,21 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 300.0
 margin/bottom = 48.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 6 )
 text = "INFORMATION LABEL"
 percent_visible = 0.0
 lines_skipped = 0
 max_lines_visible = 0
-script/script = ExtResource( 10 )
+script/script = ExtResource( 7 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 visibility/visible = false
 color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 641, 401 )
+texture = ExtResource( 8 )
 
 

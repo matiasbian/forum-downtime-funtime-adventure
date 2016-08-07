@@ -2,12 +2,11 @@ extends Label
 
 var bgZ
 var masksZ
-var mask_chairZ
+var mask_steeltrapZ
 var lightsZ
 var canvasModZ
-var mask_chairZmin
-var mask_chairZmax
-
+var mask_steeltrapZmin
+var mask_steeltrapZmax
 
 func _ready():
 	set_process(true)
@@ -15,8 +14,8 @@ func _ready():
 func _process(delta):
 	bgZ = str( get_parent().get_z() )
 	masksZ = str( get_parent().get_node("Masks").get_z() )
-	mask_chairZ = str( get_parent().get_node("Masks/mask_chair").get_z() )
+	mask_steeltrapZ = str( get_parent().get_node("Masks/mask_steeltrap").get_z() )
 	lightsZ = str( get_parent().get_node("Lights").get_z() )
-	mask_chairZmin = str( get_parent().get_node("Masks/mask_chair").get_z_range_min() )
-	mask_chairZmax = str( get_parent().get_node("Masks/mask_chair").get_z_range_max() )
-	set_text("bgZ "+bgZ+"\nmasksZ "+masksZ+"\nmask_chairZ "+mask_chairZ+" "+mask_chairZmin+ " "+ mask_chairZmax + "\nlightsZ "+lightsZ)
+	mask_steeltrapZmin = str( get_parent().get_node("Masks/mask_steeltrap").get_z_range_min() )
+	mask_steeltrapZmax = str( get_parent().get_node("Masks/mask_steeltrap").get_z_range_max() )
+	set_text("bgZ "+bgZ+"\nmasksZ "+masksZ+"\nmask_steeltrapZ "+mask_steeltrapZ+" "+mask_steeltrapZmin+ " "+ mask_steeltrapZmax + "\nlightsZ "+lightsZ)
