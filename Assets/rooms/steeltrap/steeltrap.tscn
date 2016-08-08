@@ -17,12 +17,10 @@ __meta__ = { "__editor_plugin_screen__":"Script" }
 
 [node name="bg" parent="." instance=ExtResource( 1 )]
 
-z/z = -2
-
 [node name="DebugNode" type="Node2D" parent="."]
 
 visibility/visible = false
-z/z = -3
+z/z = 10
 script/script = ExtResource( 2 )
 
 [node name="gui_label" type="Label" parent="."]
@@ -47,8 +45,7 @@ script/script = ExtResource( 4 )
 [node name="player" parent="." instance=ExtResource( 5 )]
 
 visibility/light_mask = 0
-transform/pos = Vector2( 556.661, 554.134 )
-z/z = -2
+transform/pos = Vector2( 603.661, 558.134 )
 terrainPath = NodePath("../bg")
 
 
