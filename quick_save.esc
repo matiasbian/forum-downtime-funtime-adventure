@@ -4,13 +4,14 @@ cut_scene telon fade_out
 
 ## Global flags
 
+set_global interact true
 
 ## Objects
 
 
 ## Player
 
-change_scene res://scenes/test/test.scn
-teleport_pos player 675 445
+change_scene res://scenes/Escoria/MainSceneFin.scn
+teleport_pos player 683.177002 624.956299
 
 cut_scene telon fade_in
